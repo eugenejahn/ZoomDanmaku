@@ -1,0 +1,51 @@
+{
+  "name": "Zoom Danmaku",
+  "version": "1.0",
+  "description": "Zoom Danmaku",
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "storage",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://washington.zoom.us/*"
+      ],
+      "js": [
+        "jquery-2.1.3.min.js",
+        "firebase-app.js",
+        "firebase-firestore.js",
+        "js/danmaku.js",
+        "js/reformat.js",
+        "js/speech.js"
+      ],
+      "css": [
+        "main.css"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/16logo.png",
+      "48": "images/48logo.png",
+      "128": "images/128logo.png"
+    }
+  },
+  "icons": {
+    "16": "images/16logo.png",
+    "48": "images/48logo.png",
+    "128": "images/128logo.png"
+  },
+  "manifest_version": 2
+}
