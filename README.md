@@ -9,7 +9,8 @@ How to run on your Chrome?
 3. Make sure you have selected "Developer mode"
 4. Click "Load unpacked extension..."
 5. Then "ZoomDanmaku" should enable. 
-6. Then, go to the zoom link and play with our chrom extension! 
+6. On your chrome extensions, remember to "pin"  ZoomDanmaku, so we can modify ZOOM HTML!
+6. Then, go to the zoom link and play with ZoomDanmaku 
 7. After installing our package, you can go to this link for demo!
  https://washington.zoom.us/rec/play/-uRwjTdqcO8nXfKYU1NLmhorl0bgJb1yM5NYasPVkOiL0CjkDdnvtRpQgFZEVPwPHBsygCNR8kjEvx4H.sWZ9K2S4aY5fMPqJ
 
