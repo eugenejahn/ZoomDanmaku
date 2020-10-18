@@ -1,4 +1,4 @@
-# Dubhacks-extension
+# ZoomDanmaku
 
 Demo link(https://www.youtube.com/watch?v=GKX-_YjeZio&feature=youtu.be&ab_channel=ScottNi)
 
