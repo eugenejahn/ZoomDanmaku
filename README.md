@@ -1,6 +1,6 @@
 # ZoomDanmaku
 
-Demo link(https://www.youtube.com/watch?v=GKX-_YjeZio&feature=youtu.be&ab_channel=ScottNi)
+Demo video(https://www.youtube.com/watch?v=GKX-_YjeZio&feature=youtu.be&ab_channel=ScottNi)
 
 How to run on your Chrome?
 
