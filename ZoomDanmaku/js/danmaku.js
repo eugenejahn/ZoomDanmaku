@@ -2,14 +2,14 @@ var comments = {
   '00:00:01': ['Welcome to the recording!'],
 };
 var firebaseConfig = {
-  apiKey: '', // plz include your api key 
-  authDomain: '', // plz include your api 
-  databaseURL: '',// plz include your api  
-  projectId: 'dubhacks-292821',// plz include your api 
-  storageBucket: '',// plz include your api 
-  messagingSenderId: '',// plz include your api 
-  appId: '',// plz include your api 
-  measurementId: '',// plz include your api 
+  apiKey: '',
+  authDomain: '',
+  databaseURL: '',
+  projectId: '',
+  storageBucket: '',
+  messagingSenderId: '',
+  appId: '',
+  measurementId: '',
 };
 
 firebase.initializeApp(firebaseConfig);
@@ -17,7 +17,8 @@ firebase.initializeApp(firebaseConfig);
 var db = firebase.firestore();
 
 function writeData(classId, timeStamp, comment) {
-  const usersRef = db.collection('Classes').doc(classId);
+  var schoolId = getSchool();
+  const usersRef = db.collection(schoolId).doc(classId);
   usersRef.get().then((docSnapshot) => {
     // makes sure class exists
     let dataObj = {};
@@ -49,11 +50,18 @@ function getURL() {
   return href[5].split('?')[0];
 }
 
+function getSchool() {
+  var href = location.href.split('/');
+  var schoolLink = href[2].split('?')[0];
+  return schoolLink.split('.')[0];
+}
+
 console.log(getURL());
 
 async function readData(classId) {
+  var schoolId = getSchool();
   const data = await db
-    .collection('Classes')
+    .collection(schoolId)
     .doc(classId)
     .get()
     .then((res) => {
